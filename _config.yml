@@ -1,0 +1,71 @@
+# GitHub Pages Configuration for Subrata Choudhury's Portfolio
+
+# Site settings
+title: "Subrata Choudhury - EE & CS Engineering Student"
+description: "Personal portfolio showcasing projects in AI, Web3, and Electrical Engineering"
+author: "Subrata Choudhury"
+email: "iamcsubrata@gmail.com"
+url: "https://p4r1ch4y.github.io"
+baseurl: "/portfolio" 
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# SEO settings
+lang: en_US
+twitter:
+  username: iamcsubrata
+  card: summary_large_image
+
+social:
+  name: Subrata Choudhury
+  links:
+    - https://github.com/p4r1ch4y
+    - https://linkedin.com/in/iamcsubrata
+    - https://twitter.com/iamcsubrata
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - gemfiles
+  - package.json
+  - package-lock.json
+  - "*.csv"
+
+# Include files
+include:
+  - _pages
+  - assets
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
