@@ -53,7 +53,7 @@ portfolio/
 1. Push to your GitHub repository
 2. Go to Settings > Pages
 3. Select source branch (usually `main`)
-4. Your site will be available at `https://p4r1ch4y.github.io/portfolio`
+4. Your site will be available at `https://p4r1ch4y.github.io/`
 
 ## 📝 Customization
 

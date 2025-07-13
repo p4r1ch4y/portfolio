@@ -6,7 +6,7 @@ description: "Personal portfolio showcasing projects in AI, Web3, and Electrical
 author: "Subrata Choudhury"
 email: "iamcsubrata@gmail.com"
 url: "https://p4r1ch4y.github.io"
-baseurl: "/portfolio" 
+baseurl: " " 
 
 # Build settings
 markdown: kramdown
