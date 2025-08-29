@@ -15,7 +15,37 @@ const contactForm = document.getElementById('contact-form');
 const projectModal = document.getElementById('project-modal');
 
 // Data
-const projects = [
+const projects = [ 
+    {
+        title: "Smart City OS - A Smart City Management OS",
+        description: "AI-powered IoT Embedded Smart City Management OS / Application which tracks city wide sensor data and uses those data to predict and take better management decisions, records civil and serious sensor trend data immutably on the blockchain for improved governance and transparency.",
+        technologies: ["Supabase", " Next.js 15", "Anchor Program", "IoT", "Blockchain", "LSTM ML"],
+        features: [
+            "Predictive Analytics - LSTM/ARIMA models for traffic, energy, and environmental forecasting",
+            "Blockchain Integration - Solana-based transparent logging for data integrity",
+            "Performance Optimization - React Query caching and optimized rendering",
+            "Citizen and Governance Services - Community & CIty Services ",   
+            "Incident Alert and Prediction Alerts,"
+        ],
+        challenges: "Building and deploying dapp on Solana, troubled with batch transaction and data handling and confirmation. Array logging and stack-size errors. Login Flow",
+        liveUrl: "https://smartcityos.vercel.app/",
+        githubUrl: "https://github.com/p4r1ch4y/smart_city_os"
+    },
+    {
+        title: "Daily Spark Solana - A Dapp on Solana Devnet",
+        description: "An interative web3 application built on Solana Devnet. With Working frontend and anchor programs deployed on Solana Devnet. Built as the program assignment of School Of Solana S7",
+        technologies: ["Solana Program", " Next.js 15", "Anchor Program", "Web3", "Blockchain", "Dapp"],
+        features: [
+            "Track Progress - View your current streak and see when you last logged an idea",
+            "Works on desktop and mobile devices",
+            "Idea Prompt Generator: 10 creative prompts for inspiration",
+            "Transaction Management: Manage Solana Wallet and Robust blockhash handling and confirmation",
+            "Track Progress - View your current streak and see when you last logged an idea"
+        ],
+        challenges: "First time building and deploying dapp on Solana, troubled with blockhash handling and confirmation. Array logging and stack-size errors",
+        liveUrl: "https://dailysparksolana.vercel.app/",
+        githubUrl: "#"
+    },
     {
         title: "Stylus SDK Technical Documentation",
         description: "Comprehensive technical articles and smart contract development guides for Stylus SDK during DevRel Uni Cohort 6. Created detailed documentation to help developers understand and implement smart contracts using the Stylus framework.",
@@ -690,31 +720,11 @@ function initializeModalFunctionality() {
         });
     }
 
-    // Resume download
+    // Resume download - Simple direct link approach
     if (downloadResumeBtn) {
         downloadResumeBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            // Create a temporary link to download resume
-            const link = document.createElement('a');
-            link.href = 'assets/Subrata_Choudhury_Resume.pdf'; // You'll need to add this file
-            link.download = 'Subrata_Choudhury_Resume.pdf';
-            link.target = '_blank';
-
-            // Check if file exists, if not show notification
-            fetch(link.href)
-                .then(response => {
-                    if (response.ok) {
-                        document.body.appendChild(link);
-                        link.click();
-                        document.body.removeChild(link);
-                        showNotification('Resume download started!', 'success');
-                    } else {
-                        throw new Error('Resume file not found');
-                    }
-                })
-                .catch(() => {
-                    showNotification('Resume file not available yet. Please contact me directly!', 'warning');
-                });
+            // Let the browser handle the direct link download
+            showNotification('Resume download started!', 'success');
         });
     }
 
